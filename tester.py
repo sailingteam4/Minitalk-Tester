@@ -9,6 +9,9 @@ class Colors:
 
 failed_commands = []
 
+print("Starting tests... If they are taking too long, please check your code for infinite loops.")
+time.sleep(3)
+
 # Step 1: Test Makefile
 try:
 	makefileoutpout = subprocess.check_output("make", stderr=subprocess.STDOUT)
@@ -56,6 +59,8 @@ for message in messages:
 	start_time = time.time()
 	client = subprocess.Popen(["./client", str(server.pid), message], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 	while (client.stdout.read().decode()):
+		if time.time() - start_time > 20:
+			break
 		time.sleep(1)
 	server.terminate()
 	end_time = time.time()
