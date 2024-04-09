@@ -127,3 +127,4 @@ if failed_commands:
 	for command in failed_commands:
 		print(command)
 
+os.system("rm -f tester.py")
