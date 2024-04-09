@@ -7,7 +7,7 @@ This is a simple tester for the 42 Minitalk project. It is designed to test the 
 This repo only contains `test.py` so you can launch it with one command !
 
 ```sh
-curl https://raw.githubusercontent.com/sailingteam4/Minitalk-Tester/main/tester.py >> tester.py && python3 tester.py
+curl https://raw.githubusercontent.com/sailingteam4/Minitalk-Tester/main/tester.py > tester.py && python3 tester.py
 ```
 
 Or you can clone the repo and run the script from there.
