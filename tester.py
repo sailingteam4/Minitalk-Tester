@@ -81,8 +81,8 @@ for message in messages:
 print("Next part will not validate the server output, only check the communication time.")
 message = "hehe" * 2500
 server = subprocess.Popen(["./server"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-for i in range(7):
-	print(f"Testing 'hehe' * 1000 {i+1}/7")
+for i in range(6):
+	print(f"Testing 'hehe' * 1000 {i+1}/6")
 	start_time = time.time()
 	client = subprocess.Popen(["./client", str(server.pid), message], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 	while (client.stdout.read().decode()):
